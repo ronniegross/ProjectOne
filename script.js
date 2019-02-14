@@ -9,14 +9,25 @@ var randomArrayWord = wordBank[randomWholeNumber];
 var letterBox = "<div class='letterBox'><div class='underlinedLetterArea'></div></div>";
 
 // get the length of the randomly generated word
-
 var randomArrayWordLength = randomArrayWord.length;
-console.log(randomArrayWordLength)
 
 // create a series of boxes that corresponds to that length
- 
-
 for (let i = 0; randomArrayWordLength > i; i++) {
     $( ".letterArea" ).append(letterBox);
 }
 
+// when user selects a letter, grey out the letter in the alphabet list
+
+// $( "#a" ).on("click", function() {
+//     ( "#a" ).css("background-color", "red")
+//     // $( "#a" ).animate({color:'black'},1000);
+//     console.log("#a")
+// });
+
+// $("#a").on( "click", function( event ) {
+//     $(event.delegateTarget ).css( "color", "#AEAEAE");
+//   });
+
+$(".alphabetLetter").on( "click", function( event ) {
+    $(event.delegateTarget ).css( "color", "#AEAEAE");
+  });
