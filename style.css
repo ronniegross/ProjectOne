@@ -18,12 +18,18 @@ h1 {
     height: 400px;
 }
 
+.letterArea {
+    display: flex;
+    flex-direction: row;
+}
+
 .letterBox {
     width: 100px;
     height: 100px;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
+    padding: 15px;
     /* background-color: red; */
 }
 
@@ -32,4 +38,27 @@ h1 {
     height: 5px;
     background-color: white;
     border-radius: 5px;
+}
+
+h2 {
+    color: white;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 36px;
+    margin-top: 45px;
+}
+
+.alphabet {
+    color: white;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 28px;
+    list-style-type: none;
+    display: flex;
+    border: 2px solid white;
+    padding: 0 10px 0 10px;
+}
+
+.alphabetLetter {
+    margin: 7px;
 }
