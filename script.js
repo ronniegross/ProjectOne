@@ -18,16 +18,9 @@ for (let i = 0; randomArrayWordLength > i; i++) {
 
 // when user selects a letter, grey out the letter in the alphabet list
 
-// $( "#a" ).on("click", function() {
-//     ( "#a" ).css("background-color", "red")
-//     // $( "#a" ).animate({color:'black'},1000);
-//     console.log("#a")
-// });
-
-// $("#a").on( "click", function( event ) {
-//     $(event.delegateTarget ).css( "color", "#AEAEAE");
-//   });
-
 $(".alphabetLetter").on( "click", function( event ) {
     $(event.delegateTarget ).css( "color", "#AEAEAE");
+    $(".letterBox").append("a")
   });
+
+  // have the letter that was clicked on appear in a div 
