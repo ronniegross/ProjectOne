@@ -23,14 +23,16 @@ let addLetter = () => {
 
 console.log(randomArrayWord)
 
-// need to target the exact location(s) in the word where the letter is located
 
 // when user selects a letter, grey out the letter in the alphabet list
 // see if the string word contains the letter that was clicked
+// need to target the exact location(s) in the word where the letter is located
 $(".alphabetLetter").on( "click", function( event ) {
     $(event.delegateTarget).css( "color", "#AEAEAE");
     if (randomArrayWord.includes(event.currentTarget.innerHTML)) {
         addLetter();
     }
+    var includesLetter = randomArrayWord.indexOf(event.currentTarget.innerHTML);
+    console.log(includesLetter);
   });
 
