@@ -16,11 +16,19 @@ for (let i = 0; randomArrayWordLength > i; i++) {
     $( ".letterArea" ).append(letterBox);
 }
 
-// when user selects a letter, grey out the letter in the alphabet list
+// see if the string word contains the letter that was clicked
+// var includesLetter = randomArrayWord.includes();
 
+
+// have the letter that was clicked on appear in a div 
+let addLetter = () => {
+    $(".letterBox").append(event.currentTarget.innerHTML)
+}
+
+// when user selects a letter, grey out the letter in the alphabet list
 $(".alphabetLetter").on( "click", function( event ) {
     $(event.delegateTarget ).css( "color", "#AEAEAE");
-    $(".letterBox").append("a")
+    addLetter();
+    // console.log(event.currentTarget.innerHTML)
   });
 
-  // have the letter that was clicked on appear in a div 
