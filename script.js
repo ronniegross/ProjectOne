@@ -2,6 +2,10 @@
 var wordBank = ["hello", "banana", "candy"];
 var randomNumber = Math.random();
 var randomWholeNumber = Math.floor(randomNumber * wordBank.length);
-var randomArrayWord = wordBank[randomWholeNumber]
+var randomArrayWord = wordBank[randomWholeNumber];
 
-console.log(randomArrayWord);
+// generate a series of underlined divs that corresponds to the length of the randomly generated word
+
+var letterBox = $( ".underlinedLetterArea" ).append("<div class='letterBox'></div>");
+console.log(letterBox)
+
