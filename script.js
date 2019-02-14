@@ -16,19 +16,21 @@ for (let i = 0; randomArrayWordLength > i; i++) {
     $( ".letterArea" ).append(letterBox);
 }
 
-// see if the string word contains the letter that was clicked
-// var includesLetter = randomArrayWord.includes();
-
-
 // have the letter that was clicked on appear in a div 
 let addLetter = () => {
     $(".letterBox").append(event.currentTarget.innerHTML)
 }
 
+console.log(randomArrayWord)
+
+// need to target the exact location(s) in the word where the letter is located
+
 // when user selects a letter, grey out the letter in the alphabet list
+// see if the string word contains the letter that was clicked
 $(".alphabetLetter").on( "click", function( event ) {
-    $(event.delegateTarget ).css( "color", "#AEAEAE");
-    addLetter();
-    // console.log(event.currentTarget.innerHTML)
+    $(event.delegateTarget).css( "color", "#AEAEAE");
+    if (randomArrayWord.includes(event.currentTarget.innerHTML)) {
+        addLetter();
+    }
   });
 
