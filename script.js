@@ -14,7 +14,7 @@ var randomArrayWordLength = randomArrayWord.length;
 console.log(randomArrayWordLength)
 
 // create a series of boxes that corresponds to that length
-
+ 
 
 for (let i = 0; randomArrayWordLength > i; i++) {
     $( ".letterArea" ).append(letterBox);
