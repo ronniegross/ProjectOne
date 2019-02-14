@@ -6,6 +6,6 @@ var randomArrayWord = wordBank[randomWholeNumber];
 
 // generate a series of underlined divs that corresponds to the length of the randomly generated word
 
-var letterBox = $( ".underlinedLetterArea" ).append("<div class='letterBox'></div>");
+var letterBox = $( ".letterArea" ).append("<div class='letterBox'><div class='underlinedLetterArea'></div></div>");
 console.log(letterBox)
 
