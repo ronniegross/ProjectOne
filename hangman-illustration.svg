@@ -1,6 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 609.56 867"><defs>
-<style>.cls-1,.cls-2,.cls-3{fill:none;stroke:#fff;stroke-width:6px;}.cls-1,.cls-3{stroke-linecap:round;}.cls-1{stroke-linejoin:round;}.cls-2,.cls-3{stroke-miterlimit:10;}</style>
-</defs><title>hangman-illustration</title>
+<style>
+    .cls-1,.cls-2,.cls-3 {
+        fill: none;
+        stroke: #fff;
+        stroke-width: 12px;
+    }
+    .cls-1,.cls-3 {
+        stroke-linecap: round;
+    }
+    .cls-1 {
+        stroke-linejoin: round;
+    }
+    .cls-2,.cls-3 {
+        stroke-miterlimit: 10;
+    }  
+</style>
+
+</defs>
+<title>hangman-illustration</title>
+
+
+
 <g id="base">
     <polygon class="cls-1" points="3 864 349.85 864 176.42 666.76 3 864"/>
     <polyline class="cls-1" points="176.56 3 514.57 3 515.57 3 515.57 114.57"/>
@@ -16,4 +36,6 @@
 <g id="left_leg" data-name="left leg">
     <line class="cls-3" x1="515.56" y1="520" x2="428.56" y2="683"/></g>
 <g id="right_leg" data-name="right leg">
-    <line class="cls-3" x1="515.56" y1="520" x2="602.56" y2="683"/></g></svg>
+    <line class="cls-3" x1="515.56" y1="520" x2="602.56" y2="683"/></g>
+    
+</svg>

@@ -1,0 +1,1 @@
+var wordBank = ["hello", "banana", "candy"]
