@@ -23,16 +23,20 @@ let addLetter = () => {
 
 console.log(randomArrayWord)
 
-
-// when user selects a letter, grey out the letter in the alphabet list
-// see if the string word contains the letter that was clicked
-// need to target the exact location(s) in the word where the letter is located
 $(".alphabetLetter").on( "click", function( event ) {
+    // when user selects a letter, grey out the letter in the alphabet list
     $(event.delegateTarget).css( "color", "#AEAEAE");
+    // see if the string word contains the letter that was clicked
+    // index of the location in randomArrayWord where letter is located
+    var includesLetterIndex = randomArrayWord.indexOf(event.currentTarget.innerHTML); 
     if (randomArrayWord.includes(event.currentTarget.innerHTML)) {
-        addLetter();
+        // need to target the exact location(s) in the word where the letter is located and add letter to that location
+        for (let i = 0; i < randomArrayWordLength; i++) {
+            if (randomArrayWord[i] == event.currentTarget.innerHTML) {
+                console.log(event.currentTarget.innerHTML)
+            }
+        }
+        $( ".letterBox" )[includesLetterIndex].append(event.currentTarget.innerHTML);
     }
-    var includesLetter = randomArrayWord.indexOf(event.currentTarget.innerHTML);
-    console.log(includesLetter);
-  });
+});
 
