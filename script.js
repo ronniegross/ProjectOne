@@ -38,9 +38,10 @@ svg.addEventListener("load", function() {
                 }
             }   
         } else { 
-                var head = document.getElementById("head")
-                head.setAttribute("display", "none")
-                console.log("butts")
+            console.log("butts")    
+            var head = document.querySelector("#head")
+            head.setAttribute("style", "opacity: 1")
+                
             };
     })
 });

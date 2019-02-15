@@ -13,9 +13,9 @@ h1 {
     font-size: 100px;
 }
 
-.hangmanSVG {
-    width: 400px;
-    height: 400px;
+.svgContainer {
+    width: 10%;
+    height: 10%;
 }
 
 .letterArea {
@@ -115,22 +115,22 @@ h2 {
 .cls-2,.cls-3 {
     stroke-miterlimit: 10;
 }
-/* #head {
-    display: none;
-} */
+#head {
+    opacity: 0;
+}
 #left-arm {
-    display: none;
+    opacity: 0;
 }
 #right-arm {
-    display: none;
+    opacity: 0;
 }
 #body {
-    display: none;
+    opacity: 0;
 }
 #left_leg {
-    display: none;
+    opacity: 0;
 }
 #right_leg {
-    display: none;
+    opacity: 0;
 }
 
