@@ -36,8 +36,9 @@ var svg = document.getElementById("hangmanSVG");
 // change cursor to pointer
 $(".alphabetLetter").css( 'cursor', 'pointer' );
 
+// disable a letter if it's been clicked once (instead of on click, use one click)
 svg.addEventListener("load", function() {
-    $(".alphabetLetter").on( "click", function( event ) {
+    $(".alphabetLetter").one( "click", function( event ) {
         
         // when user selects a letter, grey out the letter in the alphabet list
         $(event.delegateTarget).css( "color", "#AEAEAE");
@@ -45,11 +46,6 @@ svg.addEventListener("load", function() {
         // index of the location in randomArrayWord where letter is located
         var includesLetterIndex = randomArrayWord.indexOf(event.currentTarget.innerHTML); 
         if (randomArrayWord.includes(event.currentTarget.innerHTML)) {
-             // disable a letter if it's been clicked once
-            // $(event.delegateTarget).attr("disabled", false);	
-            // $(".alphabetLetter").click(false);
-            // $(".alphabetLetter").click(function(){return false;});
-            // $(".alphabetLetter").on("click", function(){return false});
             // need to target the exact location(s) in the word where the letter is located and add letter to that location
             for (let i = 0; i < randomArrayWordLength; i++) {
                 if (randomArrayWord[i] == event.currentTarget.innerHTML) {
