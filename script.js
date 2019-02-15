@@ -33,14 +33,23 @@ var rightLeg = document.querySelector("#right_leg");
 
 var svg = document.getElementById("hangmanSVG");
 
+// change cursor to pointer
+$(".alphabetLetter").css( 'cursor', 'pointer' );
+
 svg.addEventListener("load", function() {
     $(".alphabetLetter").on( "click", function( event ) {
+        
         // when user selects a letter, grey out the letter in the alphabet list
         $(event.delegateTarget).css( "color", "#AEAEAE");
         // see if the string word contains the letter that was clicked
         // index of the location in randomArrayWord where letter is located
         var includesLetterIndex = randomArrayWord.indexOf(event.currentTarget.innerHTML); 
         if (randomArrayWord.includes(event.currentTarget.innerHTML)) {
+             // disable a letter if it's been clicked once
+            // $(event.delegateTarget).attr("disabled", false);	
+            // $(".alphabetLetter").click(false);
+            // $(".alphabetLetter").click(function(){return false;});
+            // $(".alphabetLetter").on("click", function(){return false});
             // need to target the exact location(s) in the word where the letter is located and add letter to that location
             for (let i = 0; i < randomArrayWordLength; i++) {
                 if (randomArrayWord[i] == event.currentTarget.innerHTML) {
@@ -48,9 +57,11 @@ svg.addEventListener("load", function() {
                     $("#box"+i).append(letterInBox);
                 }
             }   
+        // create functionality that counts down from 6 to determine what body part to reveal 
         } else { 
             wrongGuesses.push(event.currentTarget.innerHTML);
             totalGuesses = totalGuesses - 1;
+            // onClick="this.disabled=true";
             if (wrongGuesses.length == 1) {
                 head.setAttribute("style", "opacity: 1");
             } else if (wrongGuesses.length == 2) {
@@ -64,13 +75,14 @@ svg.addEventListener("load", function() {
             } else if (wrongGuesses.length == 6) {
                 rightLeg.setAttribute("style", "opacity: 1");
                 $( "#title" ).html("sorry that u suck.</br>try again loser.")
+
             } 
         };
 
     })
 });
 
-// create functionality that counts down from 6 to determine what body part to reveal 
+
 
 
 
