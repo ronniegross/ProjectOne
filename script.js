@@ -13,7 +13,7 @@ var randomArrayWordLength = randomArrayWord.length;
 
 // create a series of boxes that corresponds to that length
 for (let i = 0; randomArrayWordLength > i; i++) {
-    $( ".letterArea" ).append(letterBox);
+    $( ".letterArea" ).append(`<div id='box${i}' class='letterBox'><div class='underlinedLetterArea'></div></div>`);
 }
 
 // have the letter that was clicked on appear in a div 
@@ -33,10 +33,12 @@ $(".alphabetLetter").on( "click", function( event ) {
         // need to target the exact location(s) in the word where the letter is located and add letter to that location
         for (let i = 0; i < randomArrayWordLength; i++) {
             if (randomArrayWord[i] == event.currentTarget.innerHTML) {
-                console.log(event.currentTarget.innerHTML)
+                console.log("Found a broski here:" + i);
+                $("#box"+i).append(event.currentTarget.innerHTML);
+                // $( ".letterBox" )[includesLetterIndex].append(event.currentTarget.innerHTML);
             }
         }
-        $( ".letterBox" )[includesLetterIndex].append(event.currentTarget.innerHTML);
+        
     }
 });
 
