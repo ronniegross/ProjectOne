@@ -22,21 +22,30 @@ let addLetter = () => {
 console.log(randomArrayWord)
 
 
+window.onload=function() {
+    $(".alphabetLetter").on( "click", function( event ) {
+        // when user selects a letter, grey out the letter in the alphabet list
+        $(event.delegateTarget).css( "color", "#AEAEAE");
+        // see if the string word contains the letter that was clicked
+        // index of the location in randomArrayWord where letter is located
+        var includesLetterIndex = randomArrayWord.indexOf(event.currentTarget.innerHTML); 
+        if (randomArrayWord.includes(event.currentTarget.innerHTML)) {
+            // need to target the exact location(s) in the word where the letter is located and add letter to that location
+            for (let i = 0; i < randomArrayWordLength; i++) {
+                if (randomArrayWord[i] == event.currentTarget.innerHTML) {
+                    var letterInBox =  `<p>${event.currentTarget.innerHTML}</p>`;
+                    $("#box"+i).append(letterInBox);
+                }
+            }   
+        } else { 
+                var svgFile = $(".hangmanSVG").contentDocument;
+                var head = svgFile.getElementById("#head");
+                head.setAttribute("fill", "lime")
+                // svgItem.setAttribute("fill", "lime");
+            };
+            // $("#head").css( "color", "red");
+            // console.log( $("#head"))
+    })
+};
 
-$(".alphabetLetter").on( "click", function( event ) {
-    // when user selects a letter, grey out the letter in the alphabet list
-    $(event.delegateTarget).css( "color", "#AEAEAE");
-    // see if the string word contains the letter that was clicked
-    // index of the location in randomArrayWord where letter is located
-    var includesLetterIndex = randomArrayWord.indexOf(event.currentTarget.innerHTML); 
-    if (randomArrayWord.includes(event.currentTarget.innerHTML)) {
-        // need to target the exact location(s) in the word where the letter is located and add letter to that location
-        for (let i = 0; i < randomArrayWordLength; i++) {
-            if (randomArrayWord[i] == event.currentTarget.innerHTML) {
-                var letterInBox =  `<p>${event.currentTarget.innerHTML}</p>`
-                $("#box"+i).append(letterInBox);
-            }
-        }   
-    }
-});
 
