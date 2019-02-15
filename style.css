@@ -99,6 +99,38 @@ h2 {
     font-weight: 250;
     font-size: 75px;
     margin: 0 auto;
+}
 
+.cls-1,.cls-2,.cls-3 {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 15px;
+}
+.cls-1,.cls-3 {
+    stroke-linecap: round;
+}
+.cls-1 {
+    stroke-linejoin: round;
+}
+.cls-2,.cls-3 {
+    stroke-miterlimit: 10;
+}
+/* #head {
+    display: none;
+} */
+#left-arm {
+    display: none;
+}
+#right-arm {
+    display: none;
+}
+#body {
+    display: none;
+}
+#left_leg {
+    display: none;
+}
+#right_leg {
+    display: none;
 }
 

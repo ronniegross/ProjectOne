@@ -21,8 +21,8 @@ let addLetter = () => {
 
 console.log(randomArrayWord)
 
-
-window.onload=function() {
+var svg = document.getElementById("hangmanSVG")
+svg.addEventListener("load", function() {
     $(".alphabetLetter").on( "click", function( event ) {
         // when user selects a letter, grey out the letter in the alphabet list
         $(event.delegateTarget).css( "color", "#AEAEAE");
@@ -38,14 +38,11 @@ window.onload=function() {
                 }
             }   
         } else { 
-                var svgFile = $(".hangmanSVG").contentDocument;
-                var head = svgFile.getElementById("#head");
-                head.setAttribute("fill", "lime")
-                // svgItem.setAttribute("fill", "lime");
+                var head = document.getElementById("head")
+                head.setAttribute("display", "none")
+                console.log("butts")
             };
-            // $("#head").css( "color", "red");
-            // console.log( $("#head"))
     })
-};
+});
 
 
