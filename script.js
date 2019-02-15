@@ -21,7 +21,18 @@ let addLetter = () => {
 
 console.log(randomArrayWord)
 
-var svg = document.getElementById("hangmanSVG")
+var wrongGuesses = [];
+var totalGuesses = 6;
+var head = document.querySelector("#head");
+var body = document.querySelector("#body");
+var leftArm = document.querySelector("#left-arm");
+var rightArm = document.querySelector("#right-arm");
+var leftLeg = document.querySelector("#left_leg");
+var rightLeg = document.querySelector("#right_leg");
+
+
+var svg = document.getElementById("hangmanSVG");
+
 svg.addEventListener("load", function() {
     $(".alphabetLetter").on( "click", function( event ) {
         // when user selects a letter, grey out the letter in the alphabet list
@@ -38,12 +49,29 @@ svg.addEventListener("load", function() {
                 }
             }   
         } else { 
-            console.log("butts")    
-            var head = document.querySelector("#head")
-            head.setAttribute("style", "opacity: 1")
-                
-            };
+            wrongGuesses.push(event.currentTarget.innerHTML);
+            totalGuesses = totalGuesses - 1;
+            if (wrongGuesses.length == 1) {
+                head.setAttribute("style", "opacity: 1");
+            } else if (wrongGuesses.length == 2) {
+                body.setAttribute("style", "opacity: 1");
+            } else if (wrongGuesses.length == 3) {
+                leftArm.setAttribute("style", "opacity: 1");
+            } else if (wrongGuesses.length == 4) {
+                rightArm.setAttribute("style", "opacity: 1");
+            } else if (wrongGuesses.length == 5) {
+                leftLeg.setAttribute("style", "opacity: 1");
+            } else if (wrongGuesses.length == 6) {
+                rightLeg.setAttribute("style", "opacity: 1");
+            } 
+        };
+
     })
 });
+
+// create functionality that counts down from 6 to determine what body part to reveal 
+
+
+
 
 
