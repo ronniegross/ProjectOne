@@ -21,8 +21,7 @@ let addLetter = () => {
 
 console.log(randomArrayWord)
 
-var wrongGuesses = [];
-var totalGuesses = 6;
+
 var head = document.querySelector("#head");
 var body = document.querySelector("#body");
 var leftArm = document.querySelector("#left-arm");
@@ -33,6 +32,10 @@ var rightLeg = document.querySelector("#right_leg");
 
 var svg = document.getElementById("hangmanSVG");
 
+
+var wrongGuesses = [];
+var rightGuesses = [];
+var totalGuesses = 6;
 // change cursor to pointer
 $(".alphabetLetter").css( 'cursor', 'pointer' );
 
@@ -51,6 +54,10 @@ svg.addEventListener("load", function() {
                 if (randomArrayWord[i] == event.currentTarget.innerHTML) {
                     var letterInBox =  `<p>${event.currentTarget.innerHTML}</p>`;
                     $("#box"+i).append(letterInBox);
+                    rightGuesses.push(event.currentTarget.innerHTML);
+                    if (rightGuesses.length == randomArrayWordLength) {
+                        $( "#title" ).html("congratulations!!! u win!!!")
+                    }
                 }
             }   
         // create functionality that counts down from 6 to determine what body part to reveal 
@@ -78,6 +85,7 @@ svg.addEventListener("load", function() {
     })
 });
 
+//
 
 
 
