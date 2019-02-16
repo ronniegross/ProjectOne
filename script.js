@@ -1,8 +1,28 @@
 // generate a word for the user to guess
-var wordBank = ["banana"];
-var randomNumber = Math.random();
-var randomWholeNumber = Math.floor(randomNumber * wordBank.length);
-var randomArrayWord = wordBank[randomWholeNumber];
+let generateRandomWord = () => {
+    var wordBank = ["banana", "cat"];
+    var randomNumber = Math.random();
+    var randomWholeNumber = Math.floor(randomNumber * wordBank.length);
+    var randomArrWord = wordBank[randomWholeNumber];
+    
+    // // get the length of the randomly generated word
+    // var randomArrWordLength = randomArrWord.length;
+
+    // // create a series of boxes that corresponds to that length
+    // for (let i = 0; randomArrWordLength > i; i++) {
+    //     var letterBox = `<div id='box${i}' class='letterBox'><div class='underlinedLetterArea'></div></div>`;
+    //     $( ".letterArea" ).append(letterBox);
+    // }
+
+    return randomArrWord;
+}
+
+var randomArrayWord = generateRandomWord();
+
+// have the letter that was clicked on appear in a div 
+let addLetter = () => {
+    $(".letterBox").append(event.currentTarget.innerHTML);
+}
 
 
 // get the length of the randomly generated word
@@ -14,10 +34,7 @@ for (let i = 0; randomArrayWordLength > i; i++) {
     $( ".letterArea" ).append(letterBox);
 }
 
-// have the letter that was clicked on appear in a div 
-let addLetter = () => {
-    $(".letterBox").append(event.currentTarget.innerHTML)
-}
+
 
 console.log(randomArrayWord)
 
@@ -52,7 +69,7 @@ svg.addEventListener("load", function() {
         var includesLetterIndex = randomArrayWord.indexOf(event.currentTarget.innerHTML); 
         if (randomArrayWord.includes(event.currentTarget.innerHTML)) {
             // need to target the exact location(s) in the word where the letter is located and add letter to that location
-            for (let i = 0; i < randomArrayWordLength; i++) {
+            for (let i = 0; i < randomArrayWord.length; i++) {
                 if (randomArrayWord[i] == event.currentTarget.innerHTML) {
                     var letterInBox =  `<p>${event.currentTarget.innerHTML}</p>`;
                     $("#box"+i).append(letterInBox);
@@ -65,8 +82,13 @@ svg.addEventListener("load", function() {
                         for (let i = 0; i < allLetters.length; i++) {
                             allLetters[i].setAttribute("disabled", true);
                         }
-                        $( ".wins" ).html("7 ");
-
+                        totalWins = totalWins + 1;
+                        $( ".wins" ).html(`${totalWins} `);
+                        $( ".gamesWon" ).html('game');
+                        if (totalWins > 1) {
+                            $( ".gamesWon" ).html('games');
+                        }
+                        return totalWins;
                         // $(".alphabetLetter").css( "opacity", "0");
                     }
                 }
@@ -92,13 +114,37 @@ svg.addEventListener("load", function() {
                 $(".alphabetLetter").css( "color", "#AEAEAE");
                 // $(".playAgain").css( "background-color", "white");
                 $(".playAgain").css( "opacity", "1");
+                totalLosses = totalLosses + 1;
+                $( ".lose" ).html(`${totalLosses} `);
+                $( ".gamesLost" ).html('game');
+                if (totalLosses > 1) {
+                    $( ".gamesLost" ).html('games');
+                }
+                return totalLosses;
             } 
         };
 
     })
 });
 
-// disable letters once user has won or lost a game
+// new game button -->
+
+$( ".playAgain" ).click(function() {
+    $( ".letterArea" ).append(letterBox);
+    generateRandomWord();
+    $( ".letterArea" ).append(letterBox);
+    // console.log(generateRandomWord());
+    // $(".letterBox").empty(event.currentTarget.innerHTML);
+    // generateRandomWord();
+    // for (let i = 0; randomArrayWordLength > i; i++) {
+    //     var letterBox = `<div id='box${i}' class='letterBox'><div class='underlinedLetterArea'></div></div>`;
+    //     $( ".letterArea" ).append(letterBox);
+    // }
+});
+
+// remove previously generated div letter nodes
+
+// add new nodes for word
 
 
 
