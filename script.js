@@ -57,6 +57,9 @@ svg.addEventListener("load", function() {
                     rightGuesses.push(event.currentTarget.innerHTML);
                     if (rightGuesses.length == randomArrayWordLength) {
                         $( "#title" ).html("congratulations!!! u win!!!")
+                        $(".alphabetLetter").css( "color", "#AEAEAE");
+                        $(".playAgain").css( "background-color", "white");
+                        $(".playAgain").css( "opacity", "1");
                     }
                 }
             }   
@@ -78,7 +81,9 @@ svg.addEventListener("load", function() {
             } else if (wrongGuesses.length == 6) {
                 rightLeg.setAttribute("style", "opacity: 1");
                 $( "#title" ).html("sorry that u suck. try again loser.")
-
+                $(".alphabetLetter").css( "color", "#AEAEAE");
+                $(".playAgain").css( "background-color", "white");
+                $(".playAgain").css( "opacity", "1");
             } 
         };
 
