@@ -36,6 +36,8 @@ var svg = document.getElementById("hangmanSVG");
 var wrongGuesses = [];
 var rightGuesses = [];
 var totalGuesses = 6;
+var totalWins = 0;
+var totalLosses = 0;
 // change cursor to pointer
 $(".alphabetLetter").css( 'cursor', 'pointer' );
 
@@ -63,6 +65,8 @@ svg.addEventListener("load", function() {
                         for (let i = 0; i < allLetters.length; i++) {
                             allLetters[i].setAttribute("disabled", true);
                         }
+                        $( ".wins" ).html("7 ");
+
                         // $(".alphabetLetter").css( "opacity", "0");
                     }
                 }

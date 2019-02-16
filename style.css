@@ -23,6 +23,7 @@ h1 {
 .letterArea {
     display: flex;
     flex-direction: row;
+    margin-top: 20px;
 }
 
 .letterBox {
@@ -58,6 +59,7 @@ h2 {
     font-weight: 500;
     font-size: 30px;
     margin: 45px 0 0 0;
+    letter-spacing: 1.5px;
 }
 
 .alphabet {
@@ -71,10 +73,10 @@ h2 {
     padding: 12px 10px 12px 10px;
     margin: 0 auto;
     margin-top: 20px;
+    border-radius: 5px;
 }
 
 .alphabetLetter {
-    /* margin: 20px 10px 20px 10px; */
     margin: 5px;
 }
 
@@ -180,7 +182,7 @@ button:focus {
     opacity: .6;
     font-size: 30px;
     font-weight: 300;
-    border-radius: 20px;
+    border-radius: 5px;
     border: none;
 }
 
