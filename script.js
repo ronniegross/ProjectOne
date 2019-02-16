@@ -58,8 +58,12 @@ svg.addEventListener("load", function() {
                     if (rightGuesses.length == randomArrayWordLength) {
                         $( "#title" ).html("congratulations!!! u win!!!")
                         $(".alphabetLetter").css( "color", "#AEAEAE");
-                        $(".playAgain").css( "background-color", "white");
                         $(".playAgain").css( "opacity", "1");
+                        var allLetters = document.getElementsByClassName("alphabetLetter")
+                        for (let i = 0; i < allLetters.length; i++) {
+                            allLetters[i].setAttribute("disabled", true);
+                        }
+                        // $(".alphabetLetter").css( "opacity", "0");
                     }
                 }
             }   
@@ -82,7 +86,7 @@ svg.addEventListener("load", function() {
                 rightLeg.setAttribute("style", "opacity: 1");
                 $( "#title" ).html("sorry that u suck. try again loser.")
                 $(".alphabetLetter").css( "color", "#AEAEAE");
-                $(".playAgain").css( "background-color", "white");
+                // $(".playAgain").css( "background-color", "white");
                 $(".playAgain").css( "opacity", "1");
             } 
         };
@@ -90,7 +94,9 @@ svg.addEventListener("load", function() {
     })
 });
 
-//
+// disable letters once user has won or lost a game
+
+
 
 
 
