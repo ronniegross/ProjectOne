@@ -70,7 +70,7 @@ svg.addEventListener("load", function() {
                 leftLeg.setAttribute("style", "opacity: 1");
             } else if (wrongGuesses.length == 6) {
                 rightLeg.setAttribute("style", "opacity: 1");
-                $( "#title" ).html("sorry that u suck.</br>try again loser.")
+                $( "#title" ).html("sorry that u suck. try again loser.")
 
             } 
         };

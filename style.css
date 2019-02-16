@@ -10,12 +10,14 @@ h1 {
     font-family: 'Quicksand', sans-serif;
     color: white;
     font-weight: 100;
-    font-size: 100px;
+    font-size: 65px;
+    margin: 0;
 }
 
 .svgContainer {
-    width: 17%;
-    height: 17%;
+    width: 12%;
+    height: 12%;
+    margin-top: 40px;
 }
 
 .letterArea {
@@ -24,15 +26,15 @@ h1 {
 }
 
 .letterBox {
-    width: 100px;
-    height: 100px;
+    width: 65px;
+    height: 65px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
-    padding: 15px;
+    /* padding: 15px; */
     border-bottom: 5px solid white;
-    margin: 10px;
+    margin: 0 20px 0 10px;
     /* background-color: red; */
 }
 
@@ -54,7 +56,7 @@ h2 {
     color: white;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 500;
-    font-size: 36px;
+    font-size: 30px;
     margin: 45px 0 0 0;
 }
 
@@ -83,9 +85,9 @@ h2 {
 }
 
 .playAgain {
-    width: 200px;
-    height: 60px;
-    margin: 55px 0 40px 0;
+    width: 170px;
+    height: 50px;
+    margin: 30px 0 40px 0;
     color: #3B5C88;
     background-color: white;
     font-size: 30px;
@@ -97,7 +99,7 @@ h2 {
     color: white;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 250;
-    font-size: 75px;
+    font-size: 50px;
     margin: 0 auto;
 }
 
@@ -132,5 +134,32 @@ h2 {
 }
 #right_leg {
     opacity: 0;
+}
+.bottomScoreBoard {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    margin-top: -30px;
+}
+/* .scoreBoard {
+    margin: 10px;
+} */
+
+.winLoseTotal {
+    display: inline;
+    font-weight: 500;
+}
+.losses {
+    display: inline;
+}
+h3.scoreBoard{
+    color: white;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 30px;
+    font-weight: 100;
+    margin: 75px;
+    letter-spacing: 3px;
 }
 
