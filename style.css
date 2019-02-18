@@ -36,7 +36,17 @@ h1 {
     /* padding: 15px; */
     border-bottom: 5px solid white;
     margin: 0 20px 0 10px;
+    /* padding: 0 20px 0 10px; */
     /* background-color: red; */
+}
+
+.letterBox.correctLetter {
+    color: white;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 250;
+    font-size: 50px;
+    /* margin: 0 auto; */
+    padding-bottom: 5px;
 }
 
 /* .underlinedLetterArea {
@@ -58,7 +68,7 @@ h2 {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 500;
     font-size: 30px;
-    margin: 45px 0 0 0;
+    margin: 55px 0 0 0;
     letter-spacing: 1.5px;
 }
 
@@ -134,7 +144,7 @@ h2 {
     justify-content: center;
     align-items: center;
     width: 100vw;
-    margin-top: -40px;
+    margin-top: -30px;
 }
 /* .scoreBoard {
     margin: 10px;

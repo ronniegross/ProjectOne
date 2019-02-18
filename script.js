@@ -1,6 +1,7 @@
 // generate a word for the user to guess
 let generateRandomWord = () => {
-    var wordBank = ["banana", "cat", "hello"];
+    var wordBank = ["aesthetic", "aries", "taurus", "gemini", "cancer", "leo", "virgo", "libra", "scorpio", "sagittarius", "capricorn", "aquarius", "pisces", "gucci", "lmao", "plz"];
+    // var wordBank = ["to"];
     var randomNumber = Math.random();
     var randomWholeNumber = Math.floor(randomNumber * wordBank.length);
     var randomArrWord = wordBank[randomWholeNumber];
@@ -183,6 +184,22 @@ let setUpGame = () => {
                     if (totalLosses > 1) {
                         $( ".gamesLost" ).html('games');
                     }
+
+                    // push correct letter at correct index of created divs -->
+                        // need to insert the letter of randomly generated word into divs that correspond with the word index
+                    for (let i = 0; i < randomArrayWord.length; i++) {
+
+                        // insert letter at index i to box at index i -->
+                            // need to differentiate between new letters being inserted vs overall
+                        // i.toggleClass("correctLetter");
+                        // randomArrayWord[i].toggleClass("correctLetter");
+
+                        // $("#box"+i).toggleClass("correctLetter");
+                        $("#box"+i).append(`<p>${randomArrayWord[i]}</p>`);
+
+                        // console.log(randomArrayWord.length);
+                    }
+
 
                     // return the amount of total losses
                     return totalLosses;
