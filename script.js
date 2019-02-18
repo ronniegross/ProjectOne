@@ -194,14 +194,8 @@ let setUpGame = () => {
 
                         // insert letter at index i to box at index i -->
                             // need to differentiate between new letters being inserted vs overall
-                        // i.toggleClass("correctLetter");
-                        // randomArrayWord[i].toggleClass("correctLetter");
-
-                        // $("#box"+i).toggleClass("correctLetter");
                         $("#box"+i).append(`<p>${randomArrayWord[i]}</p>`);
-
                     }
-
 
                     // return the amount of total losses
                     return totalLosses;
@@ -222,6 +216,10 @@ setUpGame();
 
 // when the play again button is clicked...
 $( ".playAgain" ).click(function(event) {
+
+
+    // changes play again button opacity
+    $(".playAgain").css( "opacity", ".6");
 
     // enables letters again
     $(".alphabetLetter").prop('disabled', false);
