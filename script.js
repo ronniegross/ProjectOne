@@ -24,6 +24,39 @@ var randomArrayWord = generateRandomWord();
 
 console.log(randomArrayWord);
 
+// alphabet problems -->
+
+// create a function that disables clicked letters once they've been clicked
+// var disableOneLetter = () => {
+    // $(".alphabetLetter").on( "click", function( event ) {
+            
+        // when user selects a letter, grey out the letter in the alphabet list
+        // $(event.delegateTarget).css( "opacity", "0");
+
+        // $(event.delegateTarget).css( "color", "#AEAEAE");
+
+
+        // disable letter
+        // $(event.delegateTarget).css( "color", "#AEAEAE");
+        // $(event.delegateTarget).disabled = "disabled";
+        // currentLetter = document.getElementsByClassName("alphabetLetter");
+
+
+        // currentLetter = $(event.delegateTarget);
+        // console.log(currentLetter);
+        // currentLetter.setAttribute("disabled", true);
+//     })
+// }
+
+
+
+
+// create a function that disables all letters once game ends
+
+// create a function that enables letters once new game starts
+
+
+
 
 
 // function that creates letter Divs -->
@@ -95,10 +128,45 @@ let setUpGame = () => {
         // when user clickes on a letter with the class of alphabet letter
         $(".alphabetLetter").on( "click", function( event ) {
             
-            // when user selects a letter, grey out the letter in the alphabet list
+            // // when user selects a letter, grey out the letter in the alphabet list
             $(event.delegateTarget).css( "color", "#AEAEAE");
 
+            // // creates a an array for the letter that has been selected
+            // var letterSelected = [];
+
+            // // pushes the letter that was selected into that array
+            // letterSelected.push(event.currentTarget.innerHTML);
+
+            // // console logs that array
+            // console.log(letterSelected);
+
+            // // disables any element in this array
+
+            var selectedLetter = $(event.delegateTarget);
+
+            selectedLetter.prop('disabled', true);
+
+            // $(event.delegateTarget).prop('disabled', true);
+
+            console.log(selectedLetter);
+
+            // $(function () {
+            //     $(".alphabetLetter").keyup(function (event) {
+            //         if ($(this).val() == '') {
+            //             $(event.delegateTarget).prop('disabled', true);
+            //         } else {
+            //             $(event.delegateTarget).prop('disabled', false);
+            //         }
+            //     });
+            // });
+
+
+            // document.getElementsByClassName("alphabetLetter").contentEditable = "false";
+
             // disable button after it has been selected 
+            // disableOneLetter();
+
+            // $(event.delegateTarget).disabled = "disabled";
             // currentLetter = document.getElementsByClassName("alphabetLetter");
             // currentLetter.setAttribute("disabled", true);
 
@@ -154,6 +222,10 @@ let setUpGame = () => {
                             if (totalWins > 1) {
                                 $( ".gamesWon" ).html('games');
                             }
+                    
+                            // changes color of all letters to grey
+                            $(".alphabetLetter").css( "color", "#AEAEAE");
+
                             // returns the variable total wins
                             return totalWins;
                             // $(".alphabetLetter").css( "opacity", "0");
@@ -193,6 +265,12 @@ let setUpGame = () => {
                 // shows right leg + player loses the game 
                 } else if (wrongGuesses.length == 6) {
                     
+                    // disables whole alphabet
+                    // function disable() {
+                    //     document.getElementsByClassName("alphabetLetter").disabled = true;
+                    //     }
+                    // disable();
+
                     //shows right leg
                     rightLeg.setAttribute("style", "opacity: 1");
 
@@ -351,6 +429,9 @@ setUpGame();
 
 // when the play again button is clicked...
 $( ".playAgain" ).click(function(event) {
+
+    // enables letters again
+    $(".alphabetLetter").prop('disabled', false);
 
     head.setAttribute("style", "opacity: 0");
     
