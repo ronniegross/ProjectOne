@@ -185,6 +185,9 @@ let setUpGame = () => {
                         $( ".gamesLost" ).html('games');
                     }
 
+                    // clear out previously created p letter tags that were inserted 
+                    $(".letterBox").empty();
+
                     // push correct letter at correct index of created divs -->
                         // need to insert the letter of randomly generated word into divs that correspond with the word index
                     for (let i = 0; i < randomArrayWord.length; i++) {
@@ -197,7 +200,6 @@ let setUpGame = () => {
                         // $("#box"+i).toggleClass("correctLetter");
                         $("#box"+i).append(`<p>${randomArrayWord[i]}</p>`);
 
-                        // console.log(randomArrayWord.length);
                     }
 
 
