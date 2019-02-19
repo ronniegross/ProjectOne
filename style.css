@@ -46,6 +46,7 @@ body {
     padding: 10px;
     width: 100px;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .noButton {
@@ -54,6 +55,7 @@ body {
     padding: 10px;
     width: 100px;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .tutorialHeader {
@@ -68,13 +70,33 @@ h4 {
     background-color: white;
     color: #3B5C88;
     font-size: 24px;
-    padding: 10px;
+    padding: 15px;
     border-radius: 10px;
+}
+/* .tutorialAndArrow {
+    flex-direction: row;
+} */
+
+/* .next {
+    position: relative;
+    z-index: 1;
+    background-color: white;
+    color: #3B5C88;
+    width: 100px;
+    height: 50px;
+    border-radius: 5px;
+    margin: 0 auto;
+    top: 22px;
+} */
+
+.nextButton {
+    display: inline;
+    margin: 20px 0 0 0;
+    border-radius: 5px;
 }
 
 #firstTutorial {
     /* visibility: hidden; */
-    /* opacity: 1; */
     width: 300px;
     height: 300px;
     /* margin-top: 200px; */
@@ -83,16 +105,44 @@ h4 {
     z-index: 1;
     display: flex;
     align-items: center;
-    left: 0vw;
+    left: 17vw;
     top: 12vw;   
     opacity: 0;
+    /* animation-name: "bounce", "flash", "pulse"; */
+    /* animation-duration: 1s, 2s, 3s; */
+    /* animation-name: bounce; */
 }
+
+/* #tutorialOneNext {
+    display: inline;
+    margin: 20px 0 0 0;
+    border-radius: 5px;
+} */
 
 #firstArrow {
     height: 70px;
     margin-top: 55px;
     margin-left: 10px;
 }
+
+.noOpacity {
+    opacity: 0;
+}
+
+/* .okayButton1 {
+    margin: 0;
+    cursor: pointer;
+} */
+/* .firstTutorialOK {
+    color: #3B5C88;
+    background-color: white;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.firstTutorialOK p{
+    margin: 0 auto;
+} */
 
 #secondTutorial {
     /* visibility: hidden; */
@@ -106,7 +156,8 @@ h4 {
     display: flex;
     align-items: center;
     right: 7vw;
-    top: 22vw;   
+    top: 22vw;
+    opacity: 0;   
 }
 
 #secondArrow {
