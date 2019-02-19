@@ -93,24 +93,20 @@ h4 {
     display: inline;
     margin: 20px 0 0 0;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 #firstTutorial {
-    /* visibility: hidden; */
     width: 300px;
     height: 300px;
-    /* margin-top: 200px; */
     text-align: center;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     display: flex;
     align-items: center;
-    left: 17vw;
+    left: 16vw;
     top: 12vw;   
     opacity: 0;
-    /* animation-name: "bounce", "flash", "pulse"; */
-    /* animation-duration: 1s, 2s, 3s; */
-    /* animation-name: bounce; */
 }
 
 /* #tutorialOneNext {
@@ -168,6 +164,53 @@ h4 {
     /* margin-left: 10px; */
 }
 
+#thirdTutorial {
+    /* visibility: hidden; */
+    /* opacity: 1; */
+    width: 300px;
+    height: 300px;
+    /* margin-top: 200px; */
+    text-align: center;
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    right: 20vw;
+    top: 12vw;
+    opacity: 0;   
+}
+
+#thirdArrow {
+    height: 70px;
+    margin-top: 55px;
+    margin-right: 10px;
+    transform: scaleX(-1);
+    margin-left: 10px;
+}
+
+#fourthTutorial {
+    /* visibility: hidden; */
+    /* opacity: 1; */
+    width: 300px;
+    height: 300px;
+    /* margin-top: 200px; */
+    text-align: center;
+    position: fixed;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    left: 24vw;
+    top: 8vw;
+    opacity: 0;   
+}
+
+#fourthArrow {
+    height: 70px; 
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+
 /* body */
 h1 {
     font-family: 'Quicksand', sans-serif;
@@ -187,6 +230,7 @@ h1 {
     /* display: inline;  */
     margin-bottom: 30px;
     display: inline;
+    cursor: pointer;
 }
 
 .svgContainer {

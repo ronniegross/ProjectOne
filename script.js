@@ -318,10 +318,31 @@ $(".yesButton").click(function () {
 })
 
 $("#tutorialOneNext").click(function() {
+    console.log("i work")
     $("#firstTutorial").css("opacity", "0");
     var secondTutorial =  document.querySelector("#secondTutorial");
     secondTutorial.classList.add("animated", "slideInRight");
     $("#secondTutorial").css("opacity", "1");
+})
+
+$("#tutorialTwoNext").click(function() {
+    $("#secondTutorial").css("opacity", "0");
+    var thirdTutorial =  document.querySelector("#thirdTutorial");
+    thirdTutorial.classList.add("animated", "slideInRight");
+    $("#thirdTutorial").css("opacity", "1");
+})
+
+$("#tutorialThreeNext").click(function() {
+    $("#thirdTutorial").css("opacity", "0");
+    var fourthTutorial =  document.querySelector("#fourthTutorial");
+    fourthTutorial.classList.add("animated", "slideInLeft");
+    $("#fourthTutorial").css("opacity", "1");
+})
+
+$("#tutorialFourthNext").click(function() {
+    console.log("i work")
+    $("#fourthTutorial").css("opacity", "0");
+    $(".overlay").hide();
 })
 
 // $("okayButton1").click(function () {
