@@ -1,6 +1,11 @@
+// tutorial modal
+$(".infoButton").click(function () {
+    $(".tutorialModal").show();
+})
+
 // generate a word for the user to guess
 let generateRandomWord = () => {
-    var wordBank = ["aesthetic", "aries", "taurus", "gemini", "cancer", "leo", "virgo", "libra", "scorpio", "sagittarius", "capricorn", "aquarius", "pisces", "gucci", "lmao", "plz"];
+    var wordBank = ["aesthetic", "aries", "taurus", "gemini", "cancer", "leo", "virgo", "libra", "scorpio", "sagittarius", "capricorn", "aquarius", "pisces", "gucci", "lmao", "plz", "rose", "scooting", "buckethat", ];
     // var wordBank = ["to"];
     var randomNumber = Math.random();
     var randomWholeNumber = Math.floor(randomNumber * wordBank.length);
@@ -73,7 +78,7 @@ let setUpGame = () => {
             // index of the location in randomArrayWord where letter is located
             var includesLetterIndex = randomArrayWord.indexOf(event.currentTarget.innerHTML); 
             if (randomArrayWord.includes(event.currentTarget.innerHTML)) {
-
+                console.log(event);
                 // need to target the exact location(s) in the word where the letter is located and add letter to that location
                 for (let i = 0; i < randomArrayWord.length; i++) {
                     if (randomArrayWord[i] == event.currentTarget.innerHTML) {
@@ -162,7 +167,7 @@ let setUpGame = () => {
                     rightLeg.setAttribute("style", "opacity: 1");
 
                     // changes title 
-                    $( "#title" ).html("sorry that u suck. try again loser.")
+                    $( "#title" ).html("u suck. try again loser.")
 
                     // changes the color of the alphabet buttons (disabled)
                     $(".alphabetLetter").css( "color", "#AEAEAE");

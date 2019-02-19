@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Post Ironic Hangman</title>
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <link rel="stylesheet" href="style.css">
     <script defer
         src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -14,7 +16,32 @@
     <script defer src="script.js"></script>
 </head>
 <body>
-    <h1 id="title">post ironic hangman</h1> 
+    <div class="tutorialModal">
+        <div class="tutorialModalBox">
+             <h4 class="tutorialHeader">would you like a tutorial?</h4>
+            <div class="yesNoButtonArea">
+                <button class="yesButton">yes</button>
+                <button class="noButton">no</button>
+            </div>
+        </div>
+        
+    </div>
+    <div class="tutorial">
+        <!-- <div id="firstTutorial" class="animated fadeInLeft delay-2s">
+            <h4>you will be given a randomly generated post ironic word</h4>
+            <img class="downArrow" id="firstArrow" src="down arrow.png">
+        </div>
+        <div id="secondTutorial" class="animated fadeInRight delay-5s">
+                <img class="downArrow" id="secondArrow" src="down arrow.png">
+                <h4 class="animated delay-2s">guess letters in the word by selecting a letter here</h4>
+        </div> -->
+    
+        <!-- fadeIn slideInLeft -->
+    </div>
+    <div class="titleBox">
+        <h1 id="title">post ironic hangman</h1> 
+        <img class="infoButton" src="info-02.png">
+    </div>
     <div class="svgContainer">
         <svg id="hangmanSVG" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 609.56 867">
         <title>hangman-illustration</title>

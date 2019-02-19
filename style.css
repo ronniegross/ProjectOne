@@ -6,12 +6,131 @@ body {
     align-items: center;
 }
 
+/* modal */
+
+.tutorialModal {
+    display: none;
+    /* margin: 0 auto; */
+    /* left: 20px; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* display: flex; */
+}
+
+.tutorialModalBox {
+    background-color: white;
+    width: 30vw;
+    height: 17vw;
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    /* justify-content: center; */
+}
+
+.yesButton {
+    /* padding: 0; */
+    margin: 0 10px 0 0;
+    padding: 10px;
+    width: 100px;
+    border-radius: 5px;
+}
+
+.noButton {
+    /* padding: 0; */
+    margin: 0 0 10px 0;
+    padding: 10px;
+    width: 100px;
+    border-radius: 5px;
+}
+
+.tutorialHeader {
+    font-family: 'Quicksand', sans-serif;
+    background-color: white;
+    color:  #3B5C88;
+    font-size: 30px;
+}
+
+/* .yesNoButtonArea {
+    flex-direction: row;
+} */
+
+h4 {
+    font-family: 'Quicksand', sans-serif;
+    background-color: white;
+    color: #3B5C88;
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#firstTutorial {
+    /* visibility: hidden; */
+    /* opacity: 1; */
+    width: 300px;
+    height: 300px;
+    /* margin-top: 200px; */
+    text-align: center;
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    left: 17vw;
+    top: 12vw;   
+}
+
+#firstTutorial .animated {
+    opacity: 1;
+}
+
+#firstArrow {
+    height: 70px;
+    margin-top: 55px;
+    margin-left: 10px;
+}
+
+#secondTutorial {
+    /* visibility: hidden; */
+    /* opacity: 1; */
+    width: 300px;
+    height: 300px;
+    /* margin-top: 200px; */
+    text-align: center;
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    right: 7vw;
+    top: 22vw;   
+}
+
+#secondArrow {
+    height: 70px;
+    margin-top: 55px;
+    margin-right: 10px;
+    transform: scaleX(-1);
+    /* margin-left: 10px; */
+}
+
+/* body */
 h1 {
     font-family: 'Quicksand', sans-serif;
     color: white;
     font-weight: 100;
     font-size: 65px;
     margin: 0;
+}
+
+#title {
+    display: inline;
+}
+.infoButton {
+    width: 20px;
+    height: 20px;
+    /* display: inline;  */
+    margin-bottom: 30px;
 }
 
 .svgContainer {
