@@ -13,7 +13,9 @@
         src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
     <script defer src="script.js"></script>
+    <!-- <script defer src="/node_modules/animejs/lib/anime.min.js"></script> -->
 </head>
 <body>
     <div class="tutorialModal">
@@ -24,19 +26,18 @@
                 <button class="noButton">no</button>
             </div>
         </div>
-        
     </div>
+    <div class="overlay"></div>
     <div class="tutorial">
-        <!-- <div id="firstTutorial" class="animated fadeInLeft delay-2s">
+        <div id="firstTutorial">
             <h4>you will be given a randomly generated post ironic word</h4>
             <img class="downArrow" id="firstArrow" src="down arrow.png">
+            <button class="firstTutorialOK"><p>ok</p></button>
         </div>
-        <div id="secondTutorial" class="animated fadeInRight delay-5s">
+        <div id="secondTutorial">
                 <img class="downArrow" id="secondArrow" src="down arrow.png">
-                <h4 class="animated delay-2s">guess letters in the word by selecting a letter here</h4>
-        </div> -->
-    
-        <!-- fadeIn slideInLeft -->
+                <h4>guess letters in the word by selecting a letter here</h4>
+        </div>
     </div>
     <div class="titleBox">
         <h1 id="title">post ironic hangman</h1> 
