@@ -340,7 +340,15 @@ $("#tutorialThreeNext").click(function() {
 })
 
 $("#tutorialFourthNext").click(function() {
-    console.log("i work")
+    $("#fourthTutorial").css("opacity", "0");
+    $(".overlay").hide();
+})
+
+$(".overlay").click(function() {
+    $(".tutorialModal").hide();
+    $("#firstTutorial").css("opacity", "0");
+    $("#secondTutorial").css("opacity", "0");
+    $("#thirdTutorial").css("opacity", "0");
     $("#fourthTutorial").css("opacity", "0");
     $(".overlay").hide();
 })
