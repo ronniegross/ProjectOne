@@ -275,48 +275,25 @@ $(".playAgain").click(function (event) {
 
 // tutorial modal
 $(".infoButton").click(function () {
-    // $(".tutorialModal").show();
     $(".tutorialModal").css("display", "flex");
-    // $("body").css("background-color", "black");
     $(".overlay").show();
 })
 
+// user selects no on modal
 $(".noButton").click(function () {
     $(".tutorialModal").hide();
     $(".overlay").hide();
 })
 
+// usr selects yes on modal
 $(".yesButton").click(function () {
     $(".tutorialModal").hide();
     $("#firstTutorial").css("opacity", "1");
     var firstTutorial =  document.querySelector("#firstTutorial");
     firstTutorial.classList.add("animated", "slideInLeft");
-    // firstTutorial.classList.add("animated", "jello");
-    // firstTutorial = setInterval(changeOpacity, 2000)
-    // var changeOpacity = () => {
-    //     firstTutorial.classList.add(".noOpacity")
-    // }
-
-    // firstTutorial.classList.add("animated", "slideOutDown");
-
-    // class="animated"
-
-    // $(".overlay").hide();
-    // anime({
-    //     targets: "#firstTutorial",
-    //     translateX: [0, 150],
-    //     opacity: 1,
-    //     // duration: 5000
-    //     // offset: '-=200'
-    //     // offset: "-=500",
-    //     // delay: anime.stagger(100,{start: 500})
-    // });
-    // anime({
-    //     targets: "#firstTutorial",
-    //     translateY: 150
-    // });
 })
 
+// user selects next on first tutorial modal
 $("#tutorialOneNext").click(function() {
     console.log("i work")
     $("#firstTutorial").css("opacity", "0");
@@ -325,6 +302,7 @@ $("#tutorialOneNext").click(function() {
     $("#secondTutorial").css("opacity", "1");
 })
 
+// user selects next on second tutorial modal
 $("#tutorialTwoNext").click(function() {
     $("#secondTutorial").css("opacity", "0");
     var thirdTutorial =  document.querySelector("#thirdTutorial");
@@ -332,6 +310,7 @@ $("#tutorialTwoNext").click(function() {
     $("#thirdTutorial").css("opacity", "1");
 })
 
+// user selects next on third tutorial modal
 $("#tutorialThreeNext").click(function() {
     $("#thirdTutorial").css("opacity", "0");
     var fourthTutorial =  document.querySelector("#fourthTutorial");
@@ -339,11 +318,13 @@ $("#tutorialThreeNext").click(function() {
     $("#fourthTutorial").css("opacity", "1");
 })
 
+// user selects good luck on final modal
 $("#tutorialFourthNext").click(function() {
     $("#fourthTutorial").css("opacity", "0");
     $(".overlay").hide();
 })
 
+// gets rid of all modals when user clicks off modal screen 
 $(".overlay").click(function() {
     $(".tutorialModal").hide();
     $("#firstTutorial").css("opacity", "0");
@@ -352,17 +333,3 @@ $(".overlay").click(function() {
     $("#fourthTutorial").css("opacity", "0");
     $(".overlay").hide();
 })
-
-// $("okayButton1").click(function () {
-//     $(".firstTutorial").hide();
-//     // anime({
-//     //     targets: "#secondTutorial",
-//     //     translateX: [0, 150],
-//     //     opacity: 1
-//     // });
-//     anime({
-//         targets: "#firstTutorial",
-//         opacity: 0
-//     });
-// });
-// })

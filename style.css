@@ -6,7 +6,6 @@ body {
     align-items: center;
 }
 .overlay {
-    /* background-color: #4A4A4A; */
     background-color: #3B5C88;
     display: none;
     position: absolute;
@@ -19,9 +18,6 @@ body {
 
 .tutorialModal {
     display: none;
-    /* margin: 0 auto; */
-    /* left: 20px; */
-    /* display: flex; */
     align-items: center;
     justify-content: center;
 }
@@ -37,7 +33,6 @@ body {
     align-items: center;
     border-radius: 5px;
     margin-top: 300px;
-    /* justify-content: center; */
 }
 
 .yesButton {
@@ -73,21 +68,6 @@ h4 {
     padding: 15px;
     border-radius: 10px;
 }
-/* .tutorialAndArrow {
-    flex-direction: row;
-} */
-
-/* .next {
-    position: relative;
-    z-index: 1;
-    background-color: white;
-    color: #3B5C88;
-    width: 100px;
-    height: 50px;
-    border-radius: 5px;
-    margin: 0 auto;
-    top: 22px;
-} */
 
 .nextButton {
     display: inline;
@@ -109,12 +89,6 @@ h4 {
     opacity: 0;
 }
 
-/* #tutorialOneNext {
-    display: inline;
-    margin: 20px 0 0 0;
-    border-radius: 5px;
-} */
-
 #firstArrow {
     height: 70px;
     margin-top: 55px;
@@ -125,34 +99,16 @@ h4 {
     opacity: 0;
 }
 
-/* .okayButton1 {
-    margin: 0;
-    cursor: pointer;
-} */
-/* .firstTutorialOK {
-    color: #3B5C88;
-    background-color: white;
-    height: 40px;
-    border-radius: 5px;
-}
-
-.firstTutorialOK p{
-    margin: 0 auto;
-} */
-
 #secondTutorial {
-    /* visibility: hidden; */
-    /* opacity: 1; */
     width: 300px;
     height: 300px;
-    /* margin-top: 200px; */
     text-align: center;
     position: fixed;
     z-index: 1;
     display: flex;
     align-items: center;
     right: 7vw;
-    top: 22vw;
+    top: 20vw;
     opacity: 0;   
 }
 
@@ -161,15 +117,11 @@ h4 {
     margin-top: 55px;
     margin-right: 10px;
     transform: scaleX(-1);
-    /* margin-left: 10px; */
 }
 
 #thirdTutorial {
-    /* visibility: hidden; */
-    /* opacity: 1; */
     width: 300px;
     height: 300px;
-    /* margin-top: 200px; */
     text-align: center;
     position: fixed;
     z-index: 1;
@@ -189,11 +141,8 @@ h4 {
 }
 
 #fourthTutorial {
-    /* visibility: hidden; */
-    /* opacity: 1; */
     width: 300px;
     height: 300px;
-    /* margin-top: 200px; */
     text-align: center;
     position: fixed;
     z-index: 3;
@@ -252,11 +201,8 @@ h1 {
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
-    /* padding: 15px; */
     border-bottom: 5px solid white;
     margin: 0 20px 0 10px;
-    /* padding: 0 20px 0 10px; */
-    /* background-color: red; */
 }
 
 .letterBox.correctLetter {
@@ -264,21 +210,12 @@ h1 {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 250;
     font-size: 50px;
-    /* margin: 0 auto; */
     padding-bottom: 5px;
 }
-
-/* .underlinedLetterArea {
-    width: 100px;
-    height: 5px;
-    background-color: white;
-    border-radius: 5px;
-} */
 
 .pickALetter {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
 }
 
@@ -365,9 +302,6 @@ h2 {
     width: 100vw;
     margin-top: -30px;
 }
-/* .scoreBoard {
-    margin: 10px;
-} */
 
 .winLoseTotal {
     display: inline;
@@ -381,13 +315,9 @@ h3.scoreBoard {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 30px;
     font-weight: 100;
-    /* margin: 75px; */
     margin: 70px 30px 0 30px;
     letter-spacing: 3px;
 }
-/* .scoreBoard {
-    margin-top: -10px;
-} */
 
 button {
     margin-top: 75px;
@@ -406,7 +336,6 @@ button:focus {
 .playAgain {
     width: 170px;
     height: 50px;
-    /* margin: 30px 0 40px 0; */
     color: #3B5C88;
     background-color: white;
     opacity: .6;
