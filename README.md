@@ -27,3 +27,12 @@ Aesthetic hangman game focused on post ironic words, topics, and ideas. Created 
 * animate.css
 * jQuery
 
+## Trello
+https://trello.com/b/CyL6SGdH/project-1-wdi
+
+## Version 2
+* better animations for tutorial
+* move tutorial button to top right screen
+* test out different colored hangman svg
+
+
