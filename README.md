@@ -4,51 +4,26 @@ Aesthetic hangman game focused on post ironic words, topics, and ideas. Created 
 
 ### Mockups
 
+[concept mockup](https://github.com/ronniegross/ProjectOne/blob/master/original%20concept.jpg)
 [original mockup](https://github.com/ronniegross/ProjectOne/blob/master/mockups/Aesthetic%20Hangman%20Blue.jpg)
+[original mockup win screen](https://github.com/ronniegross/ProjectOne/blob/master/mockups/Aesthetic%20Hangman%20Won.jpg)
+[iteration 2 home screen](https://github.com/ronniegross/ProjectOne/blob/master/mockups/iteration%201.2.jpg)
+[iteration 2 win screen](https://github.com/ronniegross/ProjectOne/blob/master/mockups/interation%201.3.jpg)
+[iteration 3 home screen](https://github.com/ronniegross/ProjectOne/blob/master/mockups/iteration%202.1.jpg)
+[tutorial original mockup](https://github.com/ronniegross/ProjectOne/blob/master/mockups/iteration%202.4.jpg)
 
-### Technology used
 
 ### User Testing
-[post ironic hangman](https://vigilant-booth-9dc719.netlify.com/)
+
+[user testing notes](https://docs.google.com/document/d/1sg36eBuauwRZVSCKJQPDH51eamWqbPh2uYOpTU4Xnj8/edit?usp=sharing)
 
 ### link to deployed app
 
-Explain what these tests test and why
+[post ironic hangman](https://vigilant-booth-9dc719.netlify.com/)
 
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* animate.css
+* jQuery
 
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
