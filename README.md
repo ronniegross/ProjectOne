@@ -26,6 +26,8 @@ Aesthetic hangman game focused on post ironic words, topics, and ideas. Created 
 
 * animate.css
 * jQuery
+* Sketch
+* Illustrator
 
 ## Trello
 https://trello.com/b/CyL6SGdH/project-1-wdi
